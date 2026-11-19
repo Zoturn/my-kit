@@ -1,0 +1,36 @@
+{
+  "hooks": [
+    {
+      "event": "PostToolUse",
+      "matcher": "Edit|Write|MultiEdit",
+      "script": "log-edit.mjs"
+    },
+    {
+      "event": "PreToolUse",
+      "matcher": "Bash",
+      "script": "docs-check.mjs",
+      "args": "pre"
+    },
+    {
+      "event": "PostToolUse",
+      "matcher": "Bash",
+      "script": "docs-check.mjs",
+      "args": "post"
+    },
+    {
+      "event": "PreToolUse",
+      "matcher": "Bash",
+      "script": "no-attribution.mjs"
+    }
+  ],
+  "env": {
+    "SUPERPOWERS_DISABLE_TELEMETRY": "1"
+  },
+  "settings": {
+    "attribution": {
+      "commit": "",
+      "pr": "",
+      "sessionUrl": false
+    }
+  }
+}

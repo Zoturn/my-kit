@@ -1,0 +1,5 @@
+{
+  "skillSources": ["~/.claude/skills"],
+  "agentSources": ["~/.claude/agents"],
+  "exclude": ["kit-setup", "kit-new"]
+}
